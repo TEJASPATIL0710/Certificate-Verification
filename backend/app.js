@@ -5,7 +5,8 @@ import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
 import swaggerUi from 'swagger-ui-express';
-import YAML from 'yamljs';
+import yaml from 'js-yaml';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -28,8 +29,8 @@ app.use(cookieParser());
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 500 }));
 
 // Swagger Setup
-
-const swaggerDoc = YAML.load(path.join(__dirname, 'swagger.yaml'));
+const swaggerFile = fs.readFileSync(path.join(__dirname, 'swagger.yaml'), 'utf8');
+const swaggerDoc = yaml.load(swaggerFile);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 // API Routes (always use relative paths)

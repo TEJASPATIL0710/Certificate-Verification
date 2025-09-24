@@ -46,3 +46,28 @@ body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Arial;
 .badge { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); }
 .badge.success { color: var(--success); border-color: var(--success); }
 .badge.failed { color: var(--danger); border-color: var(--danger); }
+
+.file-input-container {
+  margin-bottom: 16px;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  display: block;
+  padding: 10px 12px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  background: #0e1730;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.file-input-label:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}

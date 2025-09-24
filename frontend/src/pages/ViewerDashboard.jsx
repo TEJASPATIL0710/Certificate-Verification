@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { api } from '../api.js';
+import FileUpload from '../components/FileUpload.js';
 
 export default function ViewerDashboard(){
   const [studentNumber, setStudentNumber] = useState('');
@@ -18,6 +19,8 @@ export default function ViewerDashboard(){
 
   return (
     <div className="grid">
+      <FileUpload />
+
       <div className="card">
         <h2>Verify Certificate</h2>
         <p className="subtitle">Enter a student number to validate.</p>

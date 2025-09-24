@@ -11,7 +11,7 @@ import { saveUpload, getUploads } from '../controllers/uploadController.js';
 const router = express.Router();
 const upload = multer({ dest: 'uploads/' });
 
-router.post('/', upload.single('file'), saveUpload);
+router.post('/', upload.single('file'), saveUpload); // No authentication required for uploads
 router.get('/',  getUploads);
 
 export default router;

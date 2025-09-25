@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+  <sheetData>
+    <row r="1">
+      <c r="A1" t="str"><v>Student Number</v></c>
+      <c r="B1" t="str"><v>Name</v></c>
+      <c r="C1" t="str"><v>Branch</v></c>
+      <c r="D1" t="str"><v>Year of Passing</v></c>
+    </row>
+    <row r="2">
+      <c r="A2" t="str"><v>S101</v></c>
+      <c r="B2" t="str"><v>John Doe</v></c>
+      <c r="C2" t="str"><v>Computer Science</v></c>
+      <c r="D2" t="num"><v>2023</v></c>
+    </row>
+    <row r="3">
+      <c r="A3" t="str"><v>S102</v></c>
+      <c r="B3" t="str"><v>Jane Smith</v></c>
+      <c r="C3" t="str"><v>Mechanical</v></c>
+      <c r="D3" t="num"><v>2022</v></c>
+    </row>
+    <row r="4">
+      <c r="A4" t="str"><v>S103</v></c>
+      <c r="B4" t="str"><v>Bob Johnson</v></c>
+      <c r="C4" t="str"><v>Electrical</v></c>
+      <c r="D4" t="num"><v>2024</v></c>
+    </row>
+  </sheetData>
+</worksheet>

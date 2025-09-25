@@ -11,26 +11,15 @@ const { sequelize } = db;
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import certificatesRouter from './routes/certificates.js';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// Trust proxy (for rate limiting / proxies like Nginx)
-app.set("trust proxy", 1); // or true
-
 // Health Check API
 app.get('/', (req, res) => {
   res.json({ message: 'Certificate Verification API is running 🚀' });
 });
-
-app.use('/api/certificates', certificatesRouter);
 
 // Serve frontend from /public folder
 app.use(express.static(path.join(__dirname, 'public')));
